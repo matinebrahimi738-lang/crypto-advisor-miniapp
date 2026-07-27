@@ -1,36 +1,52 @@
 function analyze(){
 
-let price =
-document.getElementById("price").value;
+let coin = document.getElementById("coin").value.toUpperCase();
 
-let result =
-document.getElementById("result");
+let price = document.getElementById("price").value;
 
-if(price==""){
+let result = document.getElementById("result");
 
-result.innerHTML="❌ اول قیمت را وارد کن";
+
+if(coin==""){
+
+result.innerHTML="❌ نام ارز را وارد کن";
 
 return;
 
 }
 
-if(price<100){
 
-result.innerHTML="🟢 قیمت پایین است";
+if(price==""){
+
+result.innerHTML="❌ قیمت ارز را وارد کن";
+
+return;
 
 }
 
-else if(price<1000){
 
-result.innerHTML="🟡 نیاز به بررسی بیشتر";
+
+if(price < 100){
+
+result.innerHTML =
+"🟢 "+coin+"<br><br>قیمت پایین است<br>برای بررسی خرید مناسب‌تر است";
+
+}
+
+else if(price < 1000){
+
+result.innerHTML =
+"🟡 "+coin+"<br><br>نیاز به بررسی بیشتر دارد";
 
 }
 
 else{
 
-result.innerHTML="🔴 قیمت بالا است، فعلاً صبر کن";
+result.innerHTML =
+"🔴 "+coin+"<br><br>قیمت بالا است<br>فعلاً صبر کن";
 
 }
+
 
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 
 <head>
 <meta charset="UTF-8">
@@ -13,25 +13,54 @@
 
 <body>
 
-<h1>📈 تحلیلگر ارز</h1>
+<div class="container">
 
-<p>نسخه 1.0.1.1</p>
+<h1>🚀 Crypto Advisor</h1>
+
+<p class="version">
+نسخه 1.0.1.2
+</p>
+
+<p>
+تحلیل هوشمند ارز دیجیتال
+</p>
+
+<input
+id="coin"
+type="text"
+placeholder="نام ارز (مثلاً BTC)"
+>
+
+<br>
 
 <input
 id="price"
 type="number"
-placeholder="قیمت ارز را وارد کنید">
+placeholder="قیمت فعلی ارز"
+>
 
 <br><br>
 
 <button onclick="analyze()">
-تحلیل کن
+🔍 تحلیل کن
 </button>
 
-<h2 id="result"></h2>
+
+<div class="result-box">
+
+<h2 id="result">
+نتیجه تحلیل اینجا نمایش داده می‌شود
+</h2>
+
+</div>
+
+
+</div>
+
 
 <script src="app.js"></script>
 
 </body>
 
 </html>
+
